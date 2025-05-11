@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influencer Movie Star Sim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="currency">Cash: $0</div>
+            <div class="energy">Energy: 100/100</div>
+            <div class="week">Week 1, 2024</div>
+            <button id="nextWeekBtn">Next Week</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="popupStart" class="popup active">
+            <h2>Create Your Character</h2>
+            <input type="text" placeholder="Enter Name" id="playerName">
+            <select id="genderSelect">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <h3>Select First Career (Boosts +5%)</h3>
+            <button onclick="selectFirstCareer('singing')">Singing</button>
+            <button onclick="selectFirstCareer('acting')">Acting</button>
+        </section>
+
+        <div class="tabs">
+            <button class="tab-button" onclick="openTab('careers')">Careers</button>
+            <button class="tab-button" onclick="openTab('companies')">Companies</button>
+            <button class="tab-button" onclick="openTab('character')">Character</button>
+            <button class="tab-button" onclick="openTab('home')">Home</button>
+        </div>
+
+        <section id="careers" class="tab-content">
+            <h2>Careers</h2>
+            <button class="sub-btn" onclick="showMusicCareer()">Music Career</button>
+            <button class="sub-btn" onclick="showMovieCareer()">Movie Career</button>
+            <button class="sub-btn" onclick="showInfluencerCareer()">Influencer & Other Careers</button>
+            <div id="careerDetails"></div>
+        </section>
+
+        <section id="companies" class="tab-content hidden">
+            <h2>Companies</h2>
+            <button class="sub-btn" onclick="startNewCompany()">Start New Company</button>
+            <button class="sub-btn" onclick="viewEmpire()">Empire Overview</button>
+            <div id="companyDetails"></div>
+        </section>
+
+        <section id="character" class="tab-content hidden">
+            <h2>Character</h2>
+            <button class="sub-btn" onclick="levelTraits()">Level Traits</button>
+            <button class="sub-btn" onclick="takeLessons()">Take Lessons</button>
+            <div id="characterDetails"></div>
+        </section>
+
+        <section id="home" class="tab-content hidden">
+            <h2>Home</h2>
+            <button class="sub-btn" onclick="findJob()">Find a Job</button>
+            <button class="sub-btn" onclick="viewProperties()">Properties</button>
+            <button class="sub-btn" onclick="viewSecurity()">Security Options</button>
+            <button class="sub-btn" onclick="viewMediaStats()">Charts & Media Stats</button>
+            <button class="sub-btn" onclick="viewAwards()">Awards & Events</button>
+            <div id="homeDetails"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
